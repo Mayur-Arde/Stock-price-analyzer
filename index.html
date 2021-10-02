@@ -4,11 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Stonks Price Analyzer</title>
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <main class="main">
+    <img src="./assets/header.svg" alt="header" class="header-img">
+    <h1>Stock Profit & Loss Calculator</h1>
+    <label for="intial-price" class="label">Intial Price</label>
+    <input type="number" class="input" id="intial-price" placeholder="Enter Intial Price here">
+    <label for="stocks-quantity" class="label">Quantity of Stocks</label>
+    <input type="number" class="input" id="stocks-quantity" placeholder="Enter Number of Stocks bought">
+    <label for="current-price" class="label">Current Price</label>
+    <input type="number" class="input" id="current-price" placeholder="Enter Intial Price here">
+    <button class="btn-check" id="check">Tell me!!</button>
+    <p class="message" id="message"></p>
+    <img src="./assets/loss.png" class="stock">
+  </main>
+  <footer class=footer>
+    <div class="footer-top-right">
+      <h3>Social Links</h3>
+      <ul class=links>
+        <li><a href="https://www.linkedin.com/in/mayur-arde/"><i class="fab fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/Mayur-Arde"><i class="fab fa-github-square fa-2x"></i></a></li>
+        <li><a href="https://www.instagram.com/mayur.arde_/"><i class="fab fa-instagram fa-2x"></i></a></li>
+        <li><a href="mailto: mayurarde8@gmail.com"><ion-icon name="mail-outline" class="fab" size="large"></ion-icon> </li>
+      </ul>
+    </div>
+    <p class=copyright>Copyright &copy;Mayurarde</p>
+    </div>
+  </footer>
   <script src="./scripts/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
