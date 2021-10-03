@@ -23,6 +23,7 @@ const calculateProfitLoss = function (buyPrice, quantity, currentPrice) {
   let profitLoss = 0,
     percentageProfitLoss = 0,
     stonks;
+    // profit 
   if (buyPrice < currentPrice) {
     profitLoss = (currentPrice - buyPrice) * quantity;
     percentageProfitLoss = (profitLoss * 100) / buyPrice;
@@ -35,12 +36,15 @@ const calculateProfitLoss = function (buyPrice, quantity, currentPrice) {
       )}`,
       'var(--profit)'
     );
+    // no profit no loss 
   } else if (buyPrice === currentPrice) {
     showResult(`No Gain or No Loss`, 'profit');
     stock.style.display = 'none';
+    // loss 
   } else if (buyPrice > currentPrice) {
     profitLoss = (buyPrice - currentPrice) * quantity;
     percentageProfitLoss = (profitLoss * 100) / buyPrice;
+    // more then 50% loss 
     if (percentageProfitLoss > 50) {
       stonks = 'heavyloss';
       stock.style.display = 'block';
@@ -51,6 +55,7 @@ const calculateProfitLoss = function (buyPrice, quantity, currentPrice) {
         )}.`,
         'var(--loss)'
       );
+      // less then 50% loss 
     } else {
       stonks = 'loss';
       stock.style.display = 'block';
@@ -63,13 +68,8 @@ const calculateProfitLoss = function (buyPrice, quantity, currentPrice) {
       );
     }
   }
-  console.log(profitLoss);
 };
 
-// const checkStonks = function(stonks){
-//   stock.style.display = 'block';
-//   stock.src = `/assets/${stonks}.png`;
-// }
 
 // function to display message according to output
 const showResult = function (message, color) {
